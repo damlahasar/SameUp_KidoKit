@@ -12,40 +12,97 @@
 
 <body>
 
-    <form action="">
+    <form action="" id="loginform">
 
-        <div id="logincontent" class="logincontentpart" >
+        <div id="logincontent" class="logincontentpart">
             <h1 class="logintitle">Giriş Yap</h1>
 
             <div class="loginfirstpart">
                 <div>
-                    <div class="logincontentpositon">
+                    <div class="logincontentpositon" id="mailbox">
                         <label class="loginlabel " for="loginemailinput"> E-posta adresinizi yazınız </label>
-                        <input type="email" class="logininput">
+                        <input type="email" class="logininput" id="loginemailinput" placeholder="E-posta" required>
                     </div>
 
-                    <div class="logincontentpositon">
+                    <div class="logincontentpositon" id="pswrdbox">
                         <label class="loginlabel " for="loginpasswordinput"> Şifrenizi Giriniz </label>
-                        <input type="password" class="logininput">
+                        <input type="password" class="logininput" id="loginpasswordinput" placeholder="Şifre" required>
                     </div>
 
+                </div>
+
+                <div class="loginsecondpart">
+                    <div>
+                        <span class="loginforgetpassword"><a class="loginforgetpasswordlink"
+                                href="passwordreset.html">Şifremi Unuttum</a></span>
+                    </div>
+
+
+
+                </div>
+
+                <div class="loginthirdpart">
+
+                    <a href="https://kidokit.com/"><input type="submit" class="loginbutton" value="Giriş Yap"
+                            onclick="LoginVerify()">
+
+
+                </div>
+
             </div>
 
-            <div class="loginsecondpart">
+            <script>
 
-                <span class="loginforgetpassword"><a class="loginforgetpasswordlink" href="passwordreset.html">Şifremi Unuttum</a></span>
+                function emailvalidation() {
+
+                    const mail = document.getElementById('loginemailinput').value;
+                    const regx = /^([a-z 0-9\.-]+)@([a-z0-9-]+).([a-z]{2,8})(.[a-z]{2,8})? $/;
+                    mail.onclick = emailvalidation(); {
+
+                        if (regx.loginbutton(mail)) {
+                            return true;
+                        }
+
+                        else {
+                            alert("Lütfen E-posta Adresinizi Doğru Giriniz!");
+                            return false
+                        }
+
+                    }
+                }
 
 
-            </div>
+                function LoginVerify() {
+                    var usermail = "Admin@admin.com";
+                    var passwrd = "admin1234";
 
-            <div class="loginthirdpart">
+                    var user = document.getElementById("loginemailinput").value;
+                    var pass = document.getElementById("loginpasswordinput").value;
+                    if (user === usermail || pass ===passwrd) {
 
-                <a href="https://kidokit.com/"><input type="button" class="loginbutton" value="Giriş Yap">
+                        alert("Giriş Başarılı");
+
+                        window.location.href = "https://kidokit.com/";
+
+                    } 
+                    else {
+
+                        alert("Giriş Hatalı");
+                    }
+                }
 
 
-            </div>
 
-        </div>
+
+
+
+
+
+
+
+
+
+            </script>
 
     </form>
 </body>
