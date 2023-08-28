@@ -1,0 +1,799 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* INDEX BEGIN */
+
+.indexfirstpart {
+    background-image: url(../images/content/backgroundbabynew.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: space;
+    background-position: center;
+    height: 100vh;
+    flex-shrink: 0;
+}
+
+.indexopacitybluelayer {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.indexbluelayercontent {
+    background: linear-gradient(180deg, rgba(84, 217, 213, 0.35) 0%, #0B2C2B 100%);
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    width: 100%;
+}
+
+.indexcontainerpart {
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.indexlogo {
+
+    size: 8rem;
+    margin-bottom: 10rem;
+}
+
+#indexwelcome {
+    font-family: 'DM Sans';
+    font-weight: lighter;
+    font-size: 39px;
+    font-weight: 700;
+    line-height: 51px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #FFFFFF;
+
+}
+
+#indexsentencescontent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'DM Sans';
+    font-size: 30px;
+    font-weight: 1px;
+    line-height: 39px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #FFFFFF;
+
+
+}
+
+#indexbutton {
+    box-shadow: 0px 4px 10px 0px #0000001A;
+    width: 232px;
+    height: 68px;
+    top: 519px;
+    left: 581px;
+    border-radius: 22px;
+    color: #735EBB;
+    font-family: DM Sans;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 39px;
+    letter-spacing: 0em;
+    text-align: center;
+}
+
+#indexloginsentence {
+    font-family: 'DM Sans';
+    font-size: 27px;
+    font-weight: 700;
+    line-height: 35px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #FFFFFF;
+    left: 100px;
+    top: 300px;
+    font-weight: lighter;
+}
+
+#indexloginlink {
+    font-family: 'DM Sans';
+    font-size: 27px;
+    font-weight: 400;
+    line-height: 35px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #FFFFFF;
+    text-decoration: none;
+    font-weight: bolder;
+}
+
+/* INDEX END */
+
+
+
+
+/* REGISTER BEGIN */
+.registereye {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    opacity: 0.5;
+    color: #000000;
+    margin-left: 335px;
+
+}
+
+.registereye::before {
+    content: url(../images/svg/EyeOn.svg);
+
+}
+
+.registereye.hide::before{
+    content: url(../images/svg/EyeOff.svg);
+}
+
+
+
+
+.registercontentpart {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    column-gap: 28px;
+    row-gap: 28px;
+    max-width: 900px;
+    padding: 80px 20px;
+    margin: auto;
+
+}
+
+.registertitle {
+    font-family: 'DM Sans';
+    width: 343px;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 51px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #8D75E0;
+    column-gap: 47px;
+}
+
+.registerlabel {
+    color: #173627;
+    font-family: 'DM Sans';
+    font-size: 27px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 0em;
+    text-align: left;
+    margin-bottom: 10px;
+
+}
+
+.registerinput {
+    width: 343px;
+    height: 44px;
+    border-radius: 12px;
+    border: 2px;
+    border-color: #E6E6E6;
+    border-style: solid;
+    padding: 0 15px;
+
+}
+
+.registerinput:focus{
+    border-color: #735EBB;
+    background-color:rgba(68, 166, 180, 0.1);
+    opacity: 50%;
+    border: 2px;
+    color: rgba(23, 54, 39, 1);
+}
+
+.registerinputpart {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /* justify-content: flex-end; */
+    flex-wrap: wrap;
+}
+
+.registerposition {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    column-gap: 100px;
+    align-items: baseline;
+}
+
+.registerpasswordvalidation {
+    font-family: 'DM Sans';
+    font-size: 11px;
+    font-weight: 400;
+    line-height: 14px;
+    letter-spacing: 0em;
+    opacity: 0.8;
+    text-align: left;
+    color: #000000;
+}
+
+.registerpasswordvalidation ul {
+    list-style: none;
+}
+
+.registerpasswordvalidation ul li.passwordvalidation::before{
+    content: url(../images/svg/Checkvalidation.svg);
+    width: 13px;
+    height: 13px;
+    display: inline-flex;
+}
+
+.registerchildgenderbutton {
+
+    display: inline-flex;
+    width: 71px;
+    height: 44px;
+    padding: 0px 16px;
+    justify-content: center;
+    align-items: center;
+    column-gap: 10px;
+    border-color: #E6E6E6;
+    border-style: solid;
+    border-radius: 8px;
+    background: #FFFFFF;
+
+    color: #173627;
+    text-align: center;
+    font-family: 'DM Sans';
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 44px;
+    /* 293.333% */
+
+
+
+}
+
+.registerchildgenderbutton:focus {
+
+    display: inline-flex;
+    width: 71px;
+    height: 44px;
+    padding: 0px 16px;
+    justify-content: center;
+    align-items: center;
+    column-gap: 10px;
+    border-color: #735EBB;
+    border-style: solid;
+    border-radius: 8px;
+    background: #FFF;
+    color: #735EBB;
+
+    /* ButtonShadow */
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.08);
+
+}
+
+.registernewchild {
+    font-family: 'DM Sans';
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0em;
+    text-align: left;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: row;
+
+    margin-top: 28px;
+}
+
+.register_error {
+    margin-right: 14px;
+}
+
+input[type="checkbox"] {
+    height: 36px;
+    width: 36px;
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none;
+}
+
+
+
+.registerfifthpart {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+
+}
+
+.registertermsofusetext {
+    font-family: 'DM Sans';
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 27px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #826BD0;
+    padding-left: 26px
+}
+
+.registerreadaccept {
+
+    font-family: 'DM Sans';
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 27px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #826BD0;
+    row-gap: 61px;
+    padding-left: 4px;
+
+}
+
+.registerbutton {
+    width: 240px;
+    height: 44px;
+    top: 887px;
+    left: 569px;
+    padding: 10px 32px 10px 32px;
+    border-radius: 22px;
+    gap: 10px;
+    background-color: #735EBB;
+    color: #FFFFFF;
+    border-style: hidden;
+    margin-top: 50px;
+
+}
+
+.w-50 {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    column-gap: 10px;
+}
+
+
+
+
+/* REGISTER END */
+
+
+
+/* LOGIN BEGIN */
+
+.logincontentpart {
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    row-gap: 56px;
+
+}
+
+
+
+.logintitle {
+    font-family: 'DM Sans';
+    font-size: 39px;
+    font-weight: 700;
+    line-height: 51px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #8D75E0;
+    margin-top: 151px;
+    margin-bottom: 85px;
+
+}
+
+.logincontentpositon {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    align-content: flex-start;
+    justify-content: center;
+}
+
+
+
+.loginlabel {
+    font-family: 'DM Sans';
+    font-size: 27px;
+    font-weight: 700;
+    line-height: 35px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #173627;
+}
+
+.logininput {
+    width: 343px;
+    height: 44px;
+    border-radius: 12px;
+    border: 2px;
+    color: #E6E6E6;
+    border-style: solid;
+}
+
+.loginforgetpasswordlink {
+    text-decoration: none;
+    color: #173627;
+    font-family: 'DM Sans';
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0em;
+    text-align: center;
+
+
+}
+
+.loginsecondpart {
+    text-align: center;
+}
+
+.loginthirdpart {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    ;
+}
+
+.loginbutton {
+    width: 150px;
+    height: Hug (44px);
+    top: 591px;
+    left: 607px;
+    padding: 10px 32px 10px 32px;
+    border-radius: 22px;
+    gap: 10px;
+    border-style: hidden;
+    color: #FFFFFF;
+    background-color: #735EBB;
+
+}
+
+/* LOGIN END */
+
+
+/* PASSWORDRESET BEGIN */
+
+.passwordresetcontentpart {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: space-around;
+}
+
+.passwordresetcontentemail {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.passwordtitle {
+    margin-top: 150px;
+    margin-bottom: 83px;
+}
+
+.passwordsentence {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.passwordresetbutton {
+
+
+    color: #FFFFFF;
+    width: Fixed (171px);
+    height: Hug (44px);
+    top: 662px;
+    left: 634px;
+    padding: 10px 32px 10px 32px;
+    border-radius: 22px;
+    gap: 10px;
+    opacity: 0.4000000059604645px;
+    border-style: hidden;
+    background-color: #735EBB;
+    margin-top: 67px;
+
+}
+
+
+
+/* PASSWORDRESET END */
+
+/* EMAILRESET */
+
+.emailresetbody {
+
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden
+}
+
+.emailresetcontent {
+    background-color: #FFFFFF;
+    width: 556px;
+    height: 542px;
+    top: 228px;
+    left: 442px;
+    border-radius: 24px;
+    margin-top: 55px;
+}
+
+.emailresetposition {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.emailresetcontentsentences {
+    color: #000;
+    text-align: center;
+    font-family: 'DM Sans';
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.emailresetbutton {
+    width: 150px;
+    height: Hug (44px);
+    top: 591px;
+    left: 607px;
+    padding: 10px 32px 10px 32px;
+    border-radius: 22px;
+    gap: 10px;
+    border-style: hidden;
+    color: #FFFFFF;
+    background-color: #735EBB;
+    margin-top: 41px;
+    display: flex;
+    text-align: center;
+}
+
+
+/* EMAILRESET */
+
+
+
+
+/* EMAILRESETERROR BEGIN */
+
+.emailreseterrortitle {
+    width: 448px;
+    font-family: 'DM Sans';
+    font-size: 30px;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 0em;
+    font-style: normal;
+    text-align: center;
+    color: #EC4F4F;
+    padding-bottom: 31px;
+
+}
+
+.emailreseticon {
+    padding-top: 90px;
+    padding-bottom: 71px;
+    width: 101px;
+    height: 95px;
+}
+
+
+/* EMAILRESETERROR END */
+
+
+
+/* EMAILRESETSUCCESS BEGIN */
+
+
+.emailresetposition {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.emailresetsuccesstitle {
+    font-family: 'DM Sans';
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 39px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #3CD77A;
+    padding-bottom: 18px;
+
+}
+
+.emailresetsuccesscontentsentences {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    font-family: 'DM Sans';
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 23px;
+    font-size: small;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #000000;
+
+}
+
+
+/* EMAILRESETSUCCESS END */
+
+
+
+
+
+/* NEWPASSWORDRESET BEGIN */
+
+.newpasswordresetcontent {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.passwordtitle {
+    color: #8D75E0;
+    font-family: 'DM Sans';
+    font-size: 39px;
+    font-weight: 700;
+    line-height: 51px;
+    letter-spacing: 0em;
+    text-align: center;
+}
+
+/* NEWPASSWORDRESETFIRSTCONTENT */
+.newpasswordresetfirstcontent {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    align-content: space-around;
+    row-gap: 20px;
+}
+
+.newpasswordresetsecondcontent {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    align-content: space-around;
+    row-gap: 20px;
+
+}
+
+.newpasswordresetfirstpart {
+    row-gap: 58px;
+}
+
+
+
+.passwordlabel {
+    color: #173627;
+    font-family: 'DM Sans';
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 23px;
+    letter-spacing: 0em;
+    text-align: left;
+
+
+}
+
+.passwordinput {
+    width: 343px;
+    height: 40px;
+    border-radius: 12px;
+    border: 1px;
+    color: #E6E6E6;
+    border-style: solid;
+    flex-shrink: 0;
+}
+
+.passwordinput::placeholder {
+    color: rgba(23, 54, 39, 0.5);
+}
+
+/* NEWPASSWORDRESETFIRSTCONTENT */
+
+/* NEWPASSWORDRESETSECONDCONTENT */
+
+
+#newpasswordresetsecondcontent {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    align-content: space-around;
+}
+
+
+#newpasswordresetagaininput :placeholder {
+    color: #17362780;
+    opacity: 50px;
+    font-family: 'DM Sans';
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0em;
+    text-align: left;
+
+}
+
+/* NEWPASSWORDRESETSECONDCONTENT */
+
+
+/* NEWPASSWORDRESETSECONDPART */
+
+.passwordbutton {
+
+    color: #FFFFFF;
+    width: Fixed (171px);
+    height: Hug (44px);
+    top: 662px;
+    left: 634px;
+    padding: 10px 32px 10px 32px;
+    border-radius: 22px;
+    gap: 10px;
+    opacity: 0.4000000059604645px;
+    border-style: hidden;
+    background-color: #735EBB;
+    margin-top: 71px;
+    margin-bottom: 318px;
+}
+
+
+/* NEWPASSWORDRESETSECONDPART */
+
+/* NEWPASSWORDRESET END */

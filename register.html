@@ -1,0 +1,243 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.cdnfonts.com/css/dm-sans" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="assets/js/script.js"></script>
+    <title>Kayıt Ol</title>
+</head>
+
+<body>
+
+    <form id="registerform" action="">
+
+        <div class="registercontentpart">
+            <h1 class="registertitle">Kayıt Olun</h1>
+            <div class="registerposition">
+                <div class="w-50">
+                    <label class="registerlabel " for="registernamesurnameinput"> Adınız ve Soyadınız </label>
+                    <input type="text" class="registerinput" required minlength="6">
+                </div>
+
+                <div class="w-50">
+                    <label class="registerlabel " for="registeremailinput"> E-posta adresinizi yazınız </label>
+                    <input type="email" id="registeremailinput" class="registerinput" required>
+                </div>
+            </div>
+
+            <div class="registerposition">
+                <div class="w-50">
+                    <label class="registerlabel " for="registerpasswordinput">Bir şifre belirleyiniz</label>
+                    <div class="registerinputpart">
+                        <input type="password" id="registerpasswordinput" class="registerinput " required>
+                        <span class="registereye" id="registertogglebtn" onclick="passwordvalidation()"
+                            onkeyup="checkPassword(this.value)"> </span>
+
+                        </input>
+                    </div>
+
+                    <div class="registerpasswordvalidation">
+                        <ul>
+                            <li id="lenght">8 ila 30 karakterden oluşmalı.</li>
+                            <li id="number">En az 1 tane rakam bulunmalı.</li>
+                            <li id="specialcharacter">En az 1 tane özel karakter bulunmalı (örneğin !#$&+).</li>
+                            <li id="upper">En az 1 tane büyük harf bulunmalı.</li>
+                        </ul>
+                    </div>
+
+
+
+
+                </div>
+
+                <div class="w-50">
+
+                    <label class="registerlabel " for="registerpasswordagaininput"> Bir şifre belirleyiniz</label>
+                    <div class="registerinputpart">
+                        <input type="password" id="registerpasswordagaininput" class="registerinput" required>
+                        <span id="registertogglebtnagain" class="registereye" onclick="passwordvalidation()"></span>
+                        </input>
+
+                    </div>
+                    <div class="registerpasswordvalidation">
+                        <ul>
+                            <li id="lenghtagain">8 ila 30 karakterden oluşmalı.</li>
+                            <li id="numberagain">En az 1 tane rakam bulunmalı.</li>
+                            <li id="specialcharacteragain">En az 1 tane özel karakter bulunmalı (örneğin !#$&+).</li>
+                            <li id="upperagain">En az 1 tane büyük harf bulunmalı.</li>
+                        </ul>
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="registerposition">
+
+                <div class="w-50">
+                    <label class="registerlabel " for="registerchildnameinput"> Çocuğun ismi? </label>
+                    <input type="text" class="registerinput" required minlength="2">
+                </div>
+
+                <div class="w-50">
+                    <label class="registerlabel " for="registerchildbdayinput"> Çocuğun Doğum Tarihi?</label>
+                    <input type="date" class="registerinput" placeholder="Seçiniz" required>
+                </div>
+
+            </div>
+
+
+            <div class="registerposition">
+
+                <div class="w-50">
+                    <label class="registerlabel " for="registerchildgenderinput"> Çocuğunuzun Cinsiyeti? </label>
+                    <div class="registerchildbutton">
+                        <input type="button" class="registerchildgenderbutton" value="Erkek">
+                        <input type="button" class="registerchildgenderbutton" value="Kız">
+                    </div>
+                </div>
+
+
+                <div class="w-50">
+                    <div>
+                        <span></span>
+                    </div>
+                    <div>
+                        <span class="registernewchild"><img src="assets/images/svg/error_purple.svg"
+                                class="register_error">Kayıt sonrası yeni çocuk kayıtları oluşturabilirsiniz.</span>
+
+                    </div>
+                </div>
+
+
+            </div>
+
+            <div class="registerfifthpart">
+                <input type="checkbox" class="registercheckbox" required>
+                <span class="registertermsofusetext">Kullanım Koşullarını ve Gizlilik Sözleşmesini</span>
+                <span class="registerreadaccept"> okudum, kabul ediyorum.</span>
+
+            </div>
+
+            <div id="registersixthpart">
+
+                <input type="submit" class="registerbutton" id="registerbuttonid" value="Kayıt Ol">
+
+            </div>
+        </div>
+
+        <script>
+
+
+            // var registerbuttonalert = document.getElementById ("registerbuttonid");
+            // registerbuttonalert.onclick = function () {
+            //     window.alert("Kaydınız Başarılı.");
+            // }
+
+            function emailvalidation() {
+
+                var mail = document.getElementById('registeremailinput').value;
+                var regx = /^([a-z 0-9\.-]+)@([a-z0-9-]+).([a-z]{2,8})(.[a-z]{2,8})? $/;
+                mail.onclick = emailvalidation(); {
+
+                    if (regx.registerbuttonid(mail)) {
+                        return true;
+                    }
+
+                    else {
+                        alert("Lütfen E-posta Adresinizi Doğru Giriniz!");
+                    }
+
+                }
+            }
+
+
+
+            let password = document.getElementById('registerpasswordinput');
+            let togglebutton = document.getElementById('registertogglebtn');
+
+            let passwordagain = document.getElementById('registerpasswordagaininput');
+            let togglebuttonagain = document.getElementById('registertogglebtnagain');
+
+            let lenght = document.getElementById('lenght');
+            let digit = document.getElementById('number');
+            let specialchar = document.getElementById('specialcharacter');
+            let upperCase = document.getElementById('upper');
+
+            function checkPassword(data) {
+                const lenght = new RegExp('(?=.{8,30})');
+                const number = new RegExp('(?=.*[0-9])');
+                const specialcharacter = new RegExp('(?=.*[!@#\$%\^&\*])');
+                const upper=new RegExp('(?=.*[A-Z])');
+
+                //LENGHT
+                if(lenght.test(data)){
+                    lenght.classList.add('valid');
+                 }
+                 else{
+                    lenght.classList.remove('valid')
+                 }
+
+                 //NUMBER
+                 if(number.test(data)){
+                    digit.classList.add('valid');
+                 }
+                 else{
+                    digit.classList.remove('valid')
+                 }
+
+                 //SPECIALCHAR
+                 if(specialcharacter.test(data)){
+                    specialchar.classList.add('valid');
+                 }
+                 else{
+                    specialchar.classList.remove('valid')
+                 }
+
+
+                //UPPERCASE
+                 if(upper.test(data)){
+                    upperCase.classList.add('valid');
+                 }
+                 else{
+                    upperCase.classList.remove('valid')
+                 }
+                 }
+
+            
+
+            //show hide password
+
+
+            togglebutton.onclick = function () {
+                if (password.type === 'password') {
+                    password.type = 'text';
+                    togglebutton.classList.add('hide');
+                } else {
+                    password.type = 'password';
+                    togglebutton.classList.remove('hide');
+                }
+            };
+
+            togglebuttonagain.onclick = function () {
+                if (passwordagain.type === 'password') {
+                    passwordagain.type = 'text';
+                    togglebuttonagain.classList.add('hide');
+                } else {
+                    passwordagain.type = 'password';
+                    togglebuttonagain.classList.remove('hide');
+                }
+            };
+
+        </script>
+
+    </form>
+
+
+
+
+</body>
+
+</html>
