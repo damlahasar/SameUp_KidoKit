@@ -195,11 +195,11 @@
 }
 
 .registerinput:focus {
-    border-color: #735EBB;
+    
     background-color: rgba(68, 166, 180, 0.1);
     opacity: 50%;
-    border: 2px;
     color: rgba(23, 54, 39, 1);
+    BORDER: 2px solid #735EBB;
 }
 
 .registerinputpart {
@@ -236,11 +236,30 @@
     list-style: none;
 }
 
-.registerpasswordvalidation ul li.passwordvalidation::before {
-    content: url(../images/svg/Checkvalidation.svg);
-    width: 13px;
-    height: 13px;
-    display: inline-flex;
+.valid::before {
+    content: "";
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background-image: url(../images/svg/Checkvalidation.svg);
+    background-size: cover;
+    vertical-align: middle;
+    margin-right: 5px;
+    color: #3CD77A;
+    
+}
+
+.registerpasswordvalidation .valid li{
+    color: #3CD77A;
+}
+.invalid::before {
+    content: none;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background-size: cover;
+    vertical-align: middle;
+    margin-right: 5px; 
 }
 
 .registerchildgenderbutton {
@@ -817,3 +836,13 @@ input[type="checkbox"] {
 /* NEWPASSWORDRESETSECONDPART */
 
 /* NEWPASSWORDRESET END */
+
+.termsofusetitle{
+    color: #8D75E0;
+    text-align: center;
+}
+
+.registertermsofusetextlink{
+    text-decoration-line: none;
+    color: #826BD0;
+}

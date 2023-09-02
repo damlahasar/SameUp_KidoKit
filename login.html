@@ -73,21 +73,24 @@
 
 
                 function LoginVerify() {
-                    var usermail = "Admin@admin.com";
+                    var usermail = "admin@admin.com";
                     var passwrd = "admin1234";
 
                     var user = document.getElementById("loginemailinput").value;
                     var pass = document.getElementById("loginpasswordinput").value;
-                    if (user === usermail || pass ===passwrd) {
+                    if (user == usermail || pass == passwrd) {
 
                         alert("Giriş Başarılı");
+                        return true
 
                         window.location.href = "https://kidokit.com/";
+                        
 
                     } 
                     else {
 
                         alert("Giriş Hatalı");
+                        return  false
                     }
                 }
 
